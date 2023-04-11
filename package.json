@@ -4,7 +4,7 @@
   "description": "リモートプロシージャコール（RPC）とは、あるコンピュータプログラムが、他のプログラムにある機能やタスクの実行を依頼する方法です。",
   "main": "client.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node client.js"
   },
   "author": "",
   "license": "ISC"
