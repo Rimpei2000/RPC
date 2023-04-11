@@ -43,7 +43,7 @@ class Server:
     def respond(self, connection, recv_data):
         try:
             response = JsonProcessor.process(json.loads(recv_data))
-            connection.sendadd(response.encode())
+            connection.sendall(response.encode())
         except Exception as e:
             print('Error occurred: {}'.format(str(e)))
             error_str = { "error": str(e) }
@@ -76,7 +76,7 @@ class JsonProcessor:
             return json.dumps(response)
 
 def main():
-    socket_path = './socket_path'
+    socket_path = './socket_file'
     server = Server(socket_path)
     server.start()
 
